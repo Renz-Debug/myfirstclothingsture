@@ -1,0 +1,151 @@
+@import url('./theme.css');
+
+body {
+  min-height: 100svh;
+  padding: 32px 16px;
+}
+
+main {
+  width: min(100%, 980px);
+  margin: auto;
+}
+
+.checkout-container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  padding: clamp(20px, 5vw, 48px);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+}
+
+.checkout-container > h1 {
+  grid-column: 1 / -1;
+  margin: 0 0 10px;
+  font-family: 'Space Grotesk', Arial, sans-serif;
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  letter-spacing: -0.08em;
+}
+
+.checkout-section,
+.order-summary {
+  padding: 20px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+}
+
+.checkout-section h2,
+.order-summary h2 {
+  margin: 0 0 18px;
+  font-family: 'Space Grotesk', Arial, sans-serif;
+  font-size: 18px;
+  letter-spacing: -0.04em;
+}
+
+.checkout-section label,
+.order-summary li,
+.order-summary p {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.checkout-section > form > label,
+.payment-fields label {
+  display: block;
+  margin: 14px 0 6px;
+  font-weight: 600;
+}
+
+.checkout-section input:not([type='radio']) {
+  width: 100%;
+  padding: 11px 12px;
+  color: var(--ink);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  outline: 0;
+  font-size: 13px;
+}
+
+.checkout-section input:not([type='radio']):focus {
+  border-color: var(--ink);
+}
+
+.payment-method {
+  display: grid;
+  gap: 10px;
+}
+
+.payment-method label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.payment-method input {
+  accent-color: var(--ink);
+}
+
+.payment-fields {
+  display: none;
+}
+
+.order-summary ul {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.order-summary li {
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--line);
+}
+
+.order-summary p {
+  margin: 22px 0 0;
+  color: var(--ink);
+  font-size: 17px;
+}
+
+.checkout-footer {
+  display: flex;
+  grid-column: 1 / -1;
+  justify-content: flex-end;
+}
+
+.btn {
+  padding: 13px 22px;
+  color: var(--ink);
+  background: var(--accent);
+  border: 0;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.btn a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media (max-width: 700px) {
+  .checkout-container {
+    grid-template-columns: 1fr;
+  }
+
+  .checkout-container > h1,
+  .checkout-footer {
+    grid-column: auto;
+  }
+
+  .checkout-footer,
+  .btn {
+    width: 100%;
+  }
+}

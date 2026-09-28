@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Add to Cart</title>
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cal+Sans&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="addtocart.css">
+</head>
+<body>
+  <header>
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+
+    <div class="header-top">
+      <div class="logo">
+        <a href="#"><img src="Logo.png" alt="logo"></a>
+      </div>
+      <form action="#" method="get">
+        <div class="search-bar">
+          <span class="search-icon material-symbols-outlined">search</span>
+          <input class="search-input" type="search" placeholder="Search">
+        </div>
+      </form>
+    </div>
+
+    <nav class="navigation" id="nav-menu">
+      <ul class="primary-nav">
+        <li><a href="index.html">Home</a><i class='bx bxs-home'></i></li>
+        <li><a href="mens.html">Men's</a><i class='bx bx-male'></i></li>
+        <li><a href="womens.html">Women's</a><i class='bx bx-female'></i></li>
+        <li><a href="product.html">Product Detail</a><i class='bx bx-detail'></i></li>
+      </ul>
+      <ul class="account">
+        <li><a href="Login.html">Login</a><i class='bx bx-log-in'></i></li>
+        <li><a href="Register.html">Register</a><i class='bx bx-up-arrow-alt'></i></li>
+      </ul>
+      <ul class="shopping-action">
+        <li><a href="#">Cart</a><i class='bx bx-cart-add'></i></li>
+        <li><a href="checkout.html">Checkout</a><i class='bx bxs-checkbox-checked'></i></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="cart-container">
+      <h1>Your Shopping Cart</h1>
+      <div class="cart-items-row">
+        <div class="cart-item">
+          <img src="https://i.pinimg.com/736x/d2/39/70/d23970461c0a94ca7cda4d735af911a9.jpg" alt="Product Image">
+          <div class="item-details">
+            <h2>Heather Grey Lounge Shorts</h2>
+            <p>Price:$22.20</p>
+            <label>Quantity:
+              <input type="number" value="1" min="1">
+            </label>
+          </div>
+          <button class="remove-btn">Remove</button>
+        </div>
+
+        <div class="cart-item">
+          <img src="https://i.pinimg.com/736x/4e/10/18/4e101869c87aec8d32d3b03a66030abe.jpg" alt="Product Image">
+          <div class="item-details">
+            <h2>Speedcat Og</h2>
+            <p>Price:$127.70</p>
+            <label>Quantity:
+              <input type="number" value="1" min="1">
+            </label>
+          </div>
+          <button class="remove-btn">Remove</button>
+        </div>
+      </div>
+
+      <div class="cart-summary">
+        <h3>Total: $150.6</h3>
+        <button class="checkout-btn"><a href="checkout.html">Proceed to Checkout</a></button>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const toggle = document.getElementById("menu-toggle");
+      const nav = document.getElementById("nav-menu");
+
+      toggle.addEventListener("click", function () {
+        nav.classList.toggle("active");
+      });
+    });
+  </script>
+</body>
+</html>

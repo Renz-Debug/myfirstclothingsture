@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Page</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="Register.css">
+    <title>Register</title>
+</head>
+<body>
+    <form action="Login.html" method="get">
+        <div class="register-user">
+                <h2>DripDistrict</h2>
+                <p>Wear the drip. Own the street.</p>
+                        <input type="text" placeholder="Username" required>
+                        <i class='bx bxs-user'></i>
+                        <input type="email" placeholder="Email Address" required>
+                        <i class='bx bxs-envelope'></i>
+                        <input type="password" placeholder="Password" required>
+                        <i class='bx bxs-lock-alt'></i>
+                        <button type="button" id="register">Register</button>
+    </form>
+                <p class="login-link">Already have an account? <a href="Login.html">Log in</a></p>
+                <a href="index.html" class="back-button">← Back to Home</a>
+        </div>
+
+</body>
+</html>
+<script>
+    const mybutton = document.getElementById("register");
+
+    mybutton.addEventListener("click", function(event) {
+        event.preventDefault(); 
+        alert('Registered Successfully.');
+        window.location.href = "Login.html"; 
+    });
+</script>
